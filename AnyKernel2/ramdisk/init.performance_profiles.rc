@@ -6,6 +6,8 @@ on property:fku.perf.profile=0
     write /sys/class/kgsl/kgsl-3d0/devfreq/governor msm-adreno-tz
 	write /sys/class/kgsl/kgsl-3d0/max_pwrlevel 3
     write /sys/class/leds/lcd-backlight/max_brightness 150
+	chmod 0664 /sys/module/workqueue/parameters/power_efficient
+    write /sys/module/workqueue/parameters/power_efficient Y
 	write /sys/module/cpu_boost/parameters/input_boost_freq 0
 
 # Balance (FK defaults)
@@ -16,6 +18,8 @@ on property:fku.perf.profile=1
     write /sys/class/kgsl/kgsl-3d0/devfreq/governor msm-adreno-tz
 	write /sys/class/kgsl/kgsl-3d0/max_pwrlevel 0
     write /sys/class/leds/lcd-backlight/max_brightness 255
+	chmod 0664 /sys/module/workqueue/parameters/power_efficient
+    write /sys/module/workqueue/parameters/power_efficient Y
 	write /sys/module/cpu_boost/parameters/input_boost_freq 1401600
 
 # Performance
@@ -26,4 +30,6 @@ on property:fku.perf.profile=2
     write /sys/class/kgsl/kgsl-3d0/devfreq/governor performance
 	write /sys/class/kgsl/kgsl-3d0/max_pwrlevel 0
     write /sys/class/leds/lcd-backlight/max_brightness 255
+	chmod 0664 /sys/module/workqueue/parameters/power_efficient
+    write /sys/module/workqueue/parameters/power_efficient N
 	write /sys/module/cpu_boost/parameters/input_boost_freq 0
