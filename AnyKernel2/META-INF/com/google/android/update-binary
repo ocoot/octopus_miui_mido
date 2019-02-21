@@ -116,8 +116,9 @@ if [ "/vendor/etc/thermal-engine.conf" ]; then
    mount -o rw,remount -t auto /system;
    mount -o rw,remount -t auto /vendor 2>/dev/null;
   $bb rm -rf /vendor/etc/thermal-engine.conf
-  $bb cp -rLf /tmp/anykernel/thermal-engine.conf /vendor/etc
-  $bb chmod 0644 /vendor/etc/thermal-engine.conf
+  $bb rm -rf /system/etc/thermal-engine.conf
+  $bb cp -rLf /tmp/anykernel/thermal-engine.conf /system/etc
+  $bb chmod 0644 /system/etc/thermal-engine.conf
   $bb rm -rf /tmp/anykernel/thermal-engine.conf
 fi;
 
