@@ -54,7 +54,7 @@
 #include "xhci.h"
 
 #define DWC3_IDEV_CHG_MAX 2000
-#define DWC3_HVDCP_CHG_MAX 2000
+#define DWC3_HVDCP_CHG_MAX 2200
 
 /* AHB2PHY register offsets */
 #define PERIPH_SS_AHB2PHY_TOP_CFG 0x10
@@ -3918,7 +3918,8 @@ static void dwc3_otg_sm_work(struct work_struct *w)
 			}
 		} else {
 			mdwc->typec_current_max = 0;
-			dwc3_msm_gadget_vbus_draw(mdwc, 0);
+			if (mdwc->chg_type != DWC3_INVALID_CHARGER)
+				dwc3_msm_gadget_vbus_draw(mdwc, 0);
 			dev_dbg(mdwc->dev, "No device, allowing suspend\n");
 		}
 		break;
