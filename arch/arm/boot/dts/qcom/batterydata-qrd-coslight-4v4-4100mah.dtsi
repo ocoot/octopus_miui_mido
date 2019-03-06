@@ -5,7 +5,6 @@ qcom,2786095_huaqin_c6coslight_4100mah_averaged_masterslave_feb3rd2017 {
 	qcom,batt-id-kohm = <50>;
 	qcom,battery-beta = <3435>;
 	qcom,battery-type = "qrd_msm8953_coslight_4100mah";
-	qcom,fastchg-current-ma = <2200>;
 	qcom,chg-rslow-comp-c1 = <3439671>;
 	qcom,chg-rslow-comp-c2 = <5394943>;
 	qcom,chg-rs-to-rslow = <823652>;

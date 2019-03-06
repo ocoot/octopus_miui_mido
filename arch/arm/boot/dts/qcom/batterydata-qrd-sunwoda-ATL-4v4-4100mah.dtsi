@@ -5,7 +5,6 @@ qcom,2728170_huaqin_c6sunwoda_4100mah_averaged_masterslave_jan3rd2017 {
 	qcom,batt-id-kohm = <40>;
 	qcom,battery-beta = <3435>;
 	qcom,battery-type = "qrd_msm8953_sunwoda_atl_4100mah";
-	qcom,fastchg-current-ma = <2200>;
 	qcom,chg-rslow-comp-c1 = <3159320>;
 	qcom,chg-rslow-comp-c2 = <4074348>;
 	qcom,chg-rs-to-rslow = <921524>;

@@ -5,7 +5,6 @@ qcom,2781148_huaqin_c6desay_4100mah_averaged_masterslave_feb3rd2017 {
 	qcom,batt-id-kohm = <62>;
 	qcom,battery-beta = <3435>;
 	qcom,battery-type = "batterydata-qrd-desay-lisheng-4v4-4100mah";
-	qcom,fastchg-current-ma = <2200>;
 	qcom,chg-rslow-comp-c1 = <2747468>;
 	qcom,chg-rslow-comp-c2 = <3764702>;
 	qcom,chg-rs-to-rslow = <770184>;
