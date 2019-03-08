@@ -13,7 +13,7 @@ export PATH=$PATH:${TOOL_CHAIN_PATH}
 export out_dir="${kernel_dir}/out/"
 export builddir="${kernel_dir}/Builds"
 export ANY_KERNEL2_DIR="/home/octo21/android/octopus_miui_mido/AnyKernel2"
-export ZIP_NAME="miui-octopus-v3.0-${DATE}.zip"
+export ZIP_NAME="miui-octopus-${DATE}.zip"
 export IMAGE="${out_dir}arch/arm64/boot/Image.gz-dtb";
 export STRIP_KO="/home/octo21/android/aarch64-linux-android/aarch64-unknown-linux-android/bin/strip"
 JOBS="-j$(nproc --all)"
@@ -48,7 +48,7 @@ zipit () {
     echo "**** Zipping ****"
     zip -r9 ${ZIP_NAME} * -x README ${ZIP_NAME}
     rm -rf ${kernel_dir}/build/${ZIP_NAME}
-    cp ${ANY_KERNEL2_DIR}/${ZIP_NAME} ${kernel_dir}/build/${ZIP_NAME}
+    mv ${ANY_KERNEL2_DIR}/${ZIP_NAME} ${kernel_dir}/build/${ZIP_NAME}
 }
 
 make_defconfig
