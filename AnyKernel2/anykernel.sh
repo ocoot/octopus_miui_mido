@@ -343,7 +343,7 @@ chmod -R 755 $ramdisk
 dump_boot;
 
 # init.rc
-insert_line init.rc 'octopus' after 'import /init.\${ro.zygote}.rc' 'import /init.octopus.rc';
+insert_line init.rc "init.spectrum.rc" before "import /init.usb.rc" "import /init.spectrum.rc";
 
 write_boot;
 
