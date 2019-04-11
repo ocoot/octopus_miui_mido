@@ -4,6 +4,18 @@ export V="$(date +'%d%m-%H%M')"
 export CONFIG_FILE="octopus_defconfig"
 date=`date +"%Y%m%d-%H%M"`
 DATE=`date +"%Y%m%d"`
+
+BUILD_START=$(date +"%s")
+# Coloring
+blue='\033[0;34m'
+cyan='\033[0;36m'
+purple='\e[0;35m'
+yellow='\033[0;33m'
+red='\033[0;31m'
+nocol='\033[0m'
+
+sudo make clean && sudo make mrproper && rm -rf out/ && rm -rf build/*.zip
+
 export ARCH=arm64
 export SUBARCH=arm64
 export KBUILD_BUILD_USER="octo21" # Build Host
@@ -55,4 +67,8 @@ make_defconfig
 compile
 zipit
 cd ${kernel_dir}
+
+BUILD_END=$(date +"%s")
+DIFF=$(($BUILD_END - $BUILD_START))
+echo -e "$yellow Build completed in $(($DIFF / 60)) minute(s) and $(($DIFF % 60)) seconds."
 
