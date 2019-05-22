@@ -99,7 +99,10 @@ x509.genkey
 all.config
 
 # hmmm
-/out
+out/
+build/
+AnyKernel2/
+miuibuild.sh
 
 # fetched Android config fragments
 android/configs/android-*.cfg
