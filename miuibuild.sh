@@ -14,17 +14,16 @@ yellow='\033[0;33m'
 red='\033[0;31m'
 nocol='\033[0m'
 
-sudo make clean && sudo make mrproper && rm -rf out/ && rm -rf build/*.zip
 
 export ARCH=arm64
 export SUBARCH=arm64
 export KBUILD_BUILD_USER="octo21" # Build Host
 export KBUILD_BUILD_HOST="lineageOS" # Build Name
-export CROSS_COMPILE="/home/octo/Kernel/aarch64-linux-android-4.9/bin/aarch64-linux-android-"
+export CROSS_COMPILE="/home/octo/Kernel/aarch64-linux-android/bin/aarch64-unknown-linux-android-"
 export PATH=$PATH:${TOOL_CHAIN_PATH}
 export out_dir="${kernel_dir}/out/"
 export builddir="${kernel_dir}/Builds"
-export ANY_KERNEL2_DIR="/home/octo/android/octopus_miui_mido/AnyKernel2"
+export ANY_KERNEL2_DIR="/home/octo/Kernel/octopus_miui_mido/AnyKernel2"
 export ZIP_NAME="miui-octopus-${DATE}.zip"
 export IMAGE="${out_dir}arch/arm64/boot/Image.gz-dtb";
 export STRIP_KO="/home/octo/Kernel/aarch64-linux-android/aarch64-unknown-linux-android/bin/strip"
