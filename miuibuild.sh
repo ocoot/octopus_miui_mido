@@ -20,14 +20,14 @@ export ARCH=arm64
 export SUBARCH=arm64
 export KBUILD_BUILD_USER="octo21" # Build Host
 export KBUILD_BUILD_HOST="lineageOS" # Build Name
-export CROSS_COMPILE="/home/octo/android/aarch64-linux-android/bin/aarch64-linux-android-"
+export CROSS_COMPILE="/home/octo/Kernel/aarch64-linux-android-4.9/bin/aarch64-linux-android-"
 export PATH=$PATH:${TOOL_CHAIN_PATH}
 export out_dir="${kernel_dir}/out/"
 export builddir="${kernel_dir}/Builds"
 export ANY_KERNEL2_DIR="/home/octo/android/octopus_miui_mido/AnyKernel2"
 export ZIP_NAME="miui-octopus-${DATE}.zip"
 export IMAGE="${out_dir}arch/arm64/boot/Image.gz-dtb";
-export STRIP_KO="/home/octo/android/aarch64-linux-android/aarch64-unknown-linux-android/bin/strip"
+export STRIP_KO="/home/octo/Kernel/aarch64-linux-android/aarch64-unknown-linux-android/bin/strip"
 JOBS="-j$(nproc --all)"
 cd $kernel_dir
 
